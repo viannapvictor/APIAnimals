@@ -18,7 +18,7 @@ public interface AnimalRepository extends JpaRepository<Animal, Integer> {
 
     @Query("SELECT a.nomeRecebedor, COUNT(a.id) " +
             "FROM Animal a " +
-            "WHERE a.dataEntrada BETWEEN DATE_SUB(CURRENT_DATE, 1, 'YEAR') AND CURRENT_DATE " +
+            "WHERE YEAR(a.dataEntrada) BETWEEN (YEAR(CURRENT_DATE) - 1) AND YEAR(CURRENT_DATE) " +
             "GROUP BY a.nomeRecebedor")
     List<Object[]> countRescuedAnimalsByPerson();
 }

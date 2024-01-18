@@ -18,3 +18,8 @@ INTO
     tb_animal (tipo_animal,nome_provisorio, idade_estimada, raca, data_entrada, condicoes_chegada, nome_recebedor, porte)
 VALUES
     ('Gato','Lucas', 1, 'SRD', current_date - 80, 'Felpuda', 'Lua', 'Pequeno');
+INSERT
+INTO
+    tb_animal (tipo_animal,nome_provisorio, idade_estimada, raca, data_entrada, condicoes_chegada, nome_recebedor, porte)
+VALUES
+    ('Tigre','Liao', 7, 'bengala', current_date - 500, 'Raivosa', 'Tia Maria', 'Enorme');
